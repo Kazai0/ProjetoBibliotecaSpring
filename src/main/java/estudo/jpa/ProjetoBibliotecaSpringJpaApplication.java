@@ -36,7 +36,7 @@ public class ProjetoBibliotecaSpringJpaApplication implements CommandLineRunner 
 		Usuario usuario3 = new Usuario(3, "Manoel", "987", "manoel.augusto@gmail.com", 1998, 948748748);
 		
 		
-		usuarioRepository.saveAll(Arrays.asList(usuario1, usuario2));
+		usuarioRepository.saveAll(Arrays.asList(usuario1, usuario2, usuario3));
 		
 		
 		
