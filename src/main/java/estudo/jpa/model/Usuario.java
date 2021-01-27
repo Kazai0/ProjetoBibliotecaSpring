@@ -1,6 +1,8 @@
 package estudo.jpa.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,26 +15,28 @@ public class Usuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private String senha;
 	private String email;
-	private Integer data;
-	private Integer telefone;
+	private String cpf;
+	private String telefone;
 	
 	public Usuario() {
 		
 	}
 
-	public Usuario(Integer id, String nome, String senha, String email, Integer data, Integer telefone) {
+	public Usuario(Integer id, String nome, String senha, String email,String cpf, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
 		this.email = email;
-		this.data = data;
+		this.cpf = cpf;
 		this.telefone = telefone;
 	}
 
@@ -68,19 +72,23 @@ public class Usuario implements Serializable{
 		this.email = email;
 	}
 
-	public Integer getData() {
-		return data;
+
+	
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setData(Integer data) {
-		this.data = data;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
-	public Integer getTelefone() {
+
+
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
